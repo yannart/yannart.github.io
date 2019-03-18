@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://yannart.github.io/post/2019-03-18-first-post/</loc>
-    <lastmod>2019-03-18T00:00:00+00:00</lastmod>
+    <loc>https://yannart.github.io/post/2009-11-18-spring-garden/</loc>
+    <lastmod>2009-11-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://yannart.github.io/</loc>
-    <lastmod>2019-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2009-11-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -22,14 +22,8 @@
   </url>
   
   <url>
-    <loc>https://yannart.github.io/tags/code/</loc>
-    <lastmod>2019-03-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://yannart.github.io/tags/example/</loc>
-    <lastmod>2019-03-18T00:00:00+00:00</lastmod>
+    <loc>https://yannart.github.io/tags/java/</loc>
+    <lastmod>2009-11-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -40,13 +34,25 @@
   
   <url>
     <loc>https://yannart.github.io/post/</loc>
-    <lastmod>2019-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2009-11-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yannart.github.io/tags/spring/</loc>
+    <lastmod>2009-11-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://yannart.github.io/tags/</loc>
-    <lastmod>2019-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2009-11-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yannart.github.io/tags/tutorial/</loc>
+    <lastmod>2009-11-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

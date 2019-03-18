@@ -5,26 +5,35 @@
     <link>https://yannart.github.io/tags/</link>
     <description>Recent content in Tags on Yann Nicolas&#39; blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 18 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2009 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://yannart.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Code</title>
-      <link>https://yannart.github.io/tags/code/</link>
-      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Java</title>
+      <link>https://yannart.github.io/tags/java/</link>
+      <pubDate>Wed, 18 Nov 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://yannart.github.io/tags/code/</guid>
+      <guid>https://yannart.github.io/tags/java/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Example</title>
-      <link>https://yannart.github.io/tags/example/</link>
-      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Spring</title>
+      <link>https://yannart.github.io/tags/spring/</link>
+      <pubDate>Wed, 18 Nov 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://yannart.github.io/tags/example/</guid>
+      <guid>https://yannart.github.io/tags/spring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>https://yannart.github.io/tags/tutorial/</link>
+      <pubDate>Wed, 18 Nov 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://yannart.github.io/tags/tutorial/</guid>
       <description></description>
     </item>
     
