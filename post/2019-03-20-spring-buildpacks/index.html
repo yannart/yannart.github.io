@@ -7,12 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Tutorial - Spring Garden - Yann Nicolas&#39; blog</title>
-  <meta property="og:title" content="Tutorial - Spring Garden" />
-  <meta name="twitter:title" content="Tutorial - Spring Garden" />
-  <meta name="description" content="An introduction to Spring IoC and AOP">
-  <meta property="og:description" content="An introduction to Spring IoC and AOP">
-  <meta name="twitter:description" content="An introduction to Spring IoC and AOP">
+  <title>Create Spring Boot container images with Buildpacks - Yann Nicolas&#39; blog</title>
+  <meta property="og:title" content="Create Spring Boot container images with Buildpacks" />
+  <meta name="twitter:title" content="Create Spring Boot container images with Buildpacks" />
+  <meta name="description" content="Automate from the source code to the OCI image">
+  <meta property="og:description" content="Automate from the source code to the OCI image">
+  <meta name="twitter:description" content="Automate from the source code to the OCI image">
   <meta name="author" content="Yann Nicolas"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -48,8 +48,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https://yannart.github.io/post/2009-11-18-spring-garden/",
-          "name": "Tutorial spring garden"
+          "@id": "https://yannart.github.io/post/2019-03-20-spring-buildpacks/",
+          "name": "Create spring boot container images with buildpacks"
         }
     }]
 }
@@ -60,18 +60,16 @@
   "author": {
     "name" : "Yann Nicolas"
   },
-  "headline": "Tutorial - Spring Garden",
-  "description" : "This tutorial is an introduction to the IoC and the AOP modules of the Spring framework. We simulate a spring garden with plants and a gardener that takes care of them. But there is a problem, an evil weed is stealing all the nutrients.
-The main used technologies are Java, Spring, AspectJ and Maven.
-The tutorial is in french but is easily understandable because the code is self explanatory.
-Read the tutorial (hosted by Developpez.",
+  "headline": "Create Spring Boot container images with Buildpacks",
+  "description" : "Overview In this post we will build an OCI container image of a Spring Boot sample application using Cloud Native Buildpacks. We will then run the container using Docker.
+Introduction Spring Boot is one of the most popular frameworks to develop applications and micro-services on the Java platform. Spring Boot allows to execute applications using embedded Java Servlet Container like Tomcat or Jetty making it appropriate to be run in containers.",
   "inLanguage" : "en",
-  "wordCount": 87,
-  "datePublished" : "2009-11-18T00:00:00",
-  "dateModified" : "2009-11-18T00:00:00",
+  "wordCount": 554,
+  "datePublished" : "2019-03-20T00:00:00",
+  "dateModified" : "2019-03-20T00:00:00",
   "image" : "https://yannart.github.io",
-  "keywords" : [ "spring, java, tutorial" ],
-  "mainEntityOfPage" : "https://yannart.github.io/post/2009-11-18-spring-garden/",
+  "keywords" : [ "spring, spring boot, java, tutorial, docker, buildpacks, container, micro-service, DevOps" ],
+  "mainEntityOfPage" : "https://yannart.github.io/post/2019-03-20-spring-buildpacks/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https://yannart.github.io",
@@ -85,13 +83,13 @@ Read the tutorial (hosted by Developpez.",
 }
 </script>
 
-<meta property="og:title" content="Tutorial - Spring Garden" />
-<meta property="og:description" content="An introduction to Spring IoC and AOP">
-<meta property="og:url" content="https://yannart.github.io/post/2009-11-18-spring-garden/" />
+<meta property="og:title" content="Create Spring Boot container images with Buildpacks" />
+<meta property="og:description" content="Automate from the source code to the OCI image">
+<meta property="og:url" content="https://yannart.github.io/post/2019-03-20-spring-buildpacks/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Yann Nicolas&#39; blog" />
-  <meta name="twitter:title" content="Tutorial - Spring Garden" />
-  <meta name="twitter:description" content="An introduction to Spring IoC and AOP">
+  <meta name="twitter:title" content="Create Spring Boot container images with Buildpacks" />
+  <meta name="twitter:description" content="Automate from the source code to the OCI image">
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@yannart" />
   <meta name="twitter:creator" content="@yannart" />
@@ -99,7 +97,7 @@ Read the tutorial (hosted by Developpez.",
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@yannart" />
   <meta name="twitter:creator" content="@yannart" />
-  <meta property="og:url" content="https://yannart.github.io/post/2009-11-18-spring-garden/" />
+  <meta property="og:url" content="https://yannart.github.io/post/2019-03-20-spring-buildpacks/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yann Nicolas&#39; blog" />
 
@@ -241,25 +239,25 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Tutorial - Spring Garden</h1>
+                <h1>Create Spring Boot container images with Buildpacks</h1>
               
               
               
                 
-                  <h2 class="post-subheading">An introduction to Spring IoC and AOP</h2>
+                  <h2 class="post-subheading">Automate from the source code to the OCI image</h2>
                 
               
               
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on November 18, 2009
+  <i class="fas fa-calendar"></i>&nbsp;Posted on March 20, 2019
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;87&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;554&nbsp;words
   
   
     &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Yann Nicolas
@@ -282,15 +280,95 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>This tutorial is an introduction to the IoC and the AOP modules of the Spring framework. We simulate a spring garden with plants and a gardener that takes care of them. But there is a problem, an evil weed is stealing all the nutrients.</p>
+        
 
-<p>The main used technologies are Java, Spring, AspectJ and Maven.</p>
+<h1 id="overview">Overview</h1>
 
-<p>The tutorial is in french but is easily understandable because the code is self explanatory.</p>
+<p>In this post we will build an <a href="https://www.opencontainers.org/">OCI</a> container image of a <a href="https://spring.io/projects/spring-boot">Spring Boot</a> sample application using <a href="https://buildpacks.io/">Cloud Native Buildpacks</a>. We will then run the container using <a href="https://www.docker.com/">Docker</a>.</p>
 
-<p><a href="http://yannart.developpez.com/java/spring/tutoriel/">Read the tutorial</a> (hosted by <a href="http://www.developpez.com">Developpez.com</a>)</p>
+<h2 id="introduction">Introduction</h2>
 
-<p>Note: This is an import from my <a href="http://merlinsource.blogspot.com/">old blog</a> 10 years ago!</p>
+<p>Spring Boot is one of the most popular frameworks to develop applications and micro-services on the Java platform. Spring Boot allows to execute applications using embedded Java Servlet Container like Tomcat or Jetty making it appropriate to be run in containers.</p>
+
+<p>To run an application in a container, you need to create a container image. You can achieve that you have multiple options:</p>
+
+<ul>
+<li>Manually with a Dockerfile</li>
+<li>Using a Maven plugin</li>
+<li>Using a buildpack</li>
+</ul>
+
+<p>In this post we are focussing on the last option: use Buildpacks to create a container image for a Spring Boot application.</p>
+
+<p>Buildpacks provide a higher level of abstraction than Dockerfiles auto-discovering the right way to build and package an application based on its characteristics (programming language, framework, configuration&hellip;) including application and OS dependencies. Platforms like <a href="https://www.heroku.com/">Heroku</a> and <a href="https://pivotal.io/platform">Pivotal Cloud Foundry</a> use Buildpacks.</p>
+
+<p>We are going to use <a href="https://buildpacks.io/">Cloud Native Buildpacks</a>. This project is backed by the <a href="https://www.cncf.io/">Cloud Native Computing Fundation</a> that is also the home of fastest-growing projects like <a href="https://kubernetes.io/">Kubernetes</a>, <a href="https://prometheus.io/">Prometheus</a> or <a href="https://www.envoyproxy.io/">Envoy</a>.</p>
+
+<h2 id="pre-requisites">Pre-requisites</h2>
+
+<p>For this tutorial, you will need to have installed:</p>
+
+<ul>
+<li><a href="https://git-scm.com/">Git</a> to get the Spring Boot sample application.</li>
+<li><a href="https://adoptopenjdk.net/">JDK 1.8</a> or later to run the Spring Boot sample application locally without Docker (optional).</li>
+<li><a href="https://buildpacks.io/docs/using-pack/install-pack/">Buildpacks</a> to build the OCI container image.</li>
+<li><a href="https://www.docker.com/products/docker-desktop">Docker</a> to run the OCI container image.</li>
+</ul>
+
+<h1 id="set-up-the-spring-boot-app">Set up the Spring Boot app</h1>
+
+<p>As Spring Boot sample application we are going to use the <a href="https://github.com/spring-projects/spring-petclinic">PetClinic</a>.
+Note that we could have picked any Java application built with Maven, not necessarily a Spring Boot application.</p>
+
+<h2 id="get-the-petclinic-source-code-and-run-it">Get the PetClinic source code and run it</h2>
+
+<p>Get the PetClinic source code using Git:</p>
+<div class="highlight"><pre class="chroma">git clone https://github.com/spring-projects/spring-petclinic.git</pre></div>
+<h3 id="run-petclinic-locally-optional">Run PetClinic locally (optional)</h3>
+
+<p>Move to the local copy of the PetClinic project:</p>
+<div class="highlight"><pre class="chroma">cd spring-petclinic</pre></div>
+<p>Build the application using the <a href="https://github.com/takari/maven-wrapper">Maven wrapper</a>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">./mvnw package</code></pre></div>
+<p>Run the application:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">java -jar target/*.jar</code></pre></div>
+<p>The PetClinic application runs locally:
+<img src="/images/2019-03-20-spring-buildpacks/petclinicExec.png" alt="&quot;PetClinic application execution on the command line&quot;" /></p>
+
+<p>You can access the PetClinic Web application opening the browser on the URL <a href="http://localhost:8080/">http://localhost:8080/</a> :
+<img src="/images/2019-03-20-spring-buildpacks/petclinicWeb.png" alt="&quot;PetClinic Web application&quot;" /></p>
+
+<h1 id="build-the-container-image">Build the container image</h1>
+
+<p>Once the Buildpacks is installed, the command <code>pack</code> should be available.</p>
+
+<p>The general syntax to <a href="https://buildpacks.io/docs/using-pack/building-app/">build an application</a> is the following:</p>
+<div class="highlight"><pre class="chroma">cd /path/to/node/app
+pack build private-registry.example.com/my-app:my-tag --publish</pre></div>
+<p>Let´s build the container image for PetClinic:</p>
+<div class="highlight"><pre class="chroma">cd spring-petclinic
+pack build yannart/springboot-petclinic</pre></div>
+<p>Buildpacks will detect the right buildpack to use, get the necessary dependencies like the JDK and Maven, build the project and package it in a container image:
+<img src="/images/2019-03-20-spring-buildpacks/petclinicBuildpack.png" alt="&quot;PetClinic Buildpack build&quot;" />
+[&hellip;]
+<img src="/images/2019-03-20-spring-buildpacks/petclinicBuildpackExport.png" alt="&quot;PetClinic Buildpack export&quot;" /></p>
+
+<p>The lifecycle of the build follows the reference implementation described in the <a href="https://github.com/buildpack/spec">Buildpack API v3</a>.</p>
+
+<h1 id="run-the-container-with-docker">Run the container with Docker</h1>
+
+<p>Once the container image is built and available locally, it can be run with Docker:</p>
+<div class="highlight"><pre class="chroma">docker run -p 8080:9090 yannart/springboot-petclinic</pre></div>
+<p>In this example we are mapping the port accessible externally 9090 to the application port 8080, but any other available port could be used.</p>
+
+<p>You can then access the PetClinic Web application going to the URL http://[docker_host]:9090. In my case <a href="http://localhost:9090">http://localhost:9090</a> .</p>
+
+<h1 id="summary">Summary</h1>
+
+<p>In this post we have seen how we can automate the build of a Spring Boot application and its packaging in a container image using Buildpacks.
+The container image was then used to run the application with Docker.</p>
+
+<p>This process could be easily be included as part of a CI/CD pipeline.</p>
 
 
         
@@ -298,9 +376,21 @@ if (!doNotTrack) {
             
               <a href="https://yannart.github.io/tags/spring/">spring</a>&nbsp;
             
+              <a href="https://yannart.github.io/tags/spring-boot/">spring boot</a>&nbsp;
+            
               <a href="https://yannart.github.io/tags/java/">java</a>&nbsp;
             
               <a href="https://yannart.github.io/tags/tutorial/">tutorial</a>&nbsp;
+            
+              <a href="https://yannart.github.io/tags/docker/">docker</a>&nbsp;
+            
+              <a href="https://yannart.github.io/tags/buildpacks/">buildpacks</a>&nbsp;
+            
+              <a href="https://yannart.github.io/tags/container/">container</a>&nbsp;
+            
+              <a href="https://yannart.github.io/tags/micro-service/">micro-service</a>&nbsp;
+            
+              <a href="https://yannart.github.io/tags/devops/">DevOps</a>&nbsp;
             
           </div>
         
@@ -315,49 +405,49 @@ if (!doNotTrack) {
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fyannart.github.io%2fpost%2f2009-11-18-spring-garden%2f&amp;text=Tutorial%20-%20Spring%20Garden&amp;via=yannart" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fyannart.github.io%2fpost%2f2019-03-20-spring-buildpacks%2f&amp;text=Create%20Spring%20Boot%20container%20images%20with%20Buildpacks&amp;via=yannart" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//plus.google.com/share?url=https%3a%2f%2fyannart.github.io%2fpost%2f2009-11-18-spring-garden%2f" target="_blank" title="Share on Google Plus">
+        <a href="//plus.google.com/share?url=https%3a%2f%2fyannart.github.io%2fpost%2f2019-03-20-spring-buildpacks%2f" target="_blank" title="Share on Google Plus">
           <i class="fab fa-google-plus"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyannart.github.io%2fpost%2f2009-11-18-spring-garden%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyannart.github.io%2fpost%2f2019-03-20-spring-buildpacks%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fyannart.github.io%2fpost%2f2009-11-18-spring-garden%2f&amp;title=Tutorial%20-%20Spring%20Garden" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fyannart.github.io%2fpost%2f2019-03-20-spring-buildpacks%2f&amp;title=Create%20Spring%20Boot%20container%20images%20with%20Buildpacks" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fyannart.github.io%2fpost%2f2009-11-18-spring-garden%2f&amp;title=Tutorial%20-%20Spring%20Garden" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fyannart.github.io%2fpost%2f2019-03-20-spring-buildpacks%2f&amp;title=Create%20Spring%20Boot%20container%20images%20with%20Buildpacks" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fyannart.github.io%2fpost%2f2009-11-18-spring-garden%2f&amp;title=Tutorial%20-%20Spring%20Garden" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fyannart.github.io%2fpost%2f2019-03-20-spring-buildpacks%2f&amp;title=Create%20Spring%20Boot%20container%20images%20with%20Buildpacks" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fyannart.github.io%2fpost%2f2009-11-18-spring-garden%2f&amp;description=Tutorial%20-%20Spring%20Garden" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fyannart.github.io%2fpost%2f2019-03-20-spring-buildpacks%2f&amp;description=Create%20Spring%20Boot%20container%20images%20with%20Buildpacks" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -371,16 +461,23 @@ if (!doNotTrack) {
         
           
           
+          <h4 class="see-also">See also</h4>
+          <ul>
+          
+            <li><a href="/post/2009-11-18-spring-garden/">Tutorial - Spring Garden</a></li>
+          
+          </ul>
+          
         
       </article>
 
       
         <ul class="pager blog-pager">
           
-          
-            <li class="next">
-              <a href="https://yannart.github.io/post/2019-03-20-spring-buildpacks/" data-toggle="tooltip" data-placement="top" title="Create Spring Boot container images with Buildpacks">Next Post &rarr;</a>
+            <li class="previous">
+              <a href="https://yannart.github.io/post/2009-11-18-spring-garden/" data-toggle="tooltip" data-placement="top" title="Tutorial - Spring Garden">&larr; Previous Post</a>
             </li>
+          
           
         </ul>
       
@@ -390,12 +487,12 @@ if (!doNotTrack) {
         
           
           <div class="disqus-comments">                  
-            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://yannart.github.io/post/2009-11-18-spring-garden">comments</span></button>
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://yannart.github.io/post/2019-03-20-spring-buildpacks">comments</span></button>
             <div id="disqus_thread"></div>
 
             <script type="text/javascript">
               var disqus_config = function () {
-              this.page.url = 'https:\/\/yannart.github.io\/post\/2009-11-18-spring-garden';
+              this.page.url = 'https:\/\/yannart.github.io\/post\/2019-03-20-spring-buildpacks';
             };
 
           </script>

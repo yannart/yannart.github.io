@@ -5,33 +5,87 @@
     <link>https://yannart.github.io/tags/</link>
     <description>Recent content in Tags on Yann Nicolas&#39; blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 18 Nov 2009 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://yannart.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Buildpacks</title>
+      <link>https://yannart.github.io/tags/buildpacks/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://yannart.github.io/tags/buildpacks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Container</title>
+      <link>https://yannart.github.io/tags/container/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://yannart.github.io/tags/container/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Devops</title>
+      <link>https://yannart.github.io/tags/devops/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://yannart.github.io/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://yannart.github.io/tags/docker/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://yannart.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Java</title>
       <link>https://yannart.github.io/tags/java/</link>
-      <pubDate>Wed, 18 Nov 2009 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://yannart.github.io/tags/java/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Micro Service</title>
+      <link>https://yannart.github.io/tags/micro-service/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://yannart.github.io/tags/micro-service/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Spring</title>
       <link>https://yannart.github.io/tags/spring/</link>
-      <pubDate>Wed, 18 Nov 2009 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://yannart.github.io/tags/spring/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Spring Boot</title>
+      <link>https://yannart.github.io/tags/spring-boot/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://yannart.github.io/tags/spring-boot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Tutorial</title>
       <link>https://yannart.github.io/tags/tutorial/</link>
-      <pubDate>Wed, 18 Nov 2009 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://yannart.github.io/tags/tutorial/</guid>
       <description></description>
