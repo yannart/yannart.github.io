@@ -3,96 +3,96 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://yannart.github.io/post/2019-03-20-spring-buildpacks/</loc>
+    <loc>https://www.yannart.io/post/2019-03-20-spring-buildpacks/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yannart.github.io/post/2009-11-18-spring-garden/</loc>
+    <loc>https://www.yannart.io/post/2009-11-18-spring-garden/</loc>
     <lastmod>2009-11-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yannart.github.io/</loc>
+    <loc>https://www.yannart.io/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yannart.github.io/page/about/</loc>
+    <loc>https://www.yannart.io/page/about/</loc>
   </url>
   
   <url>
-    <loc>https://yannart.github.io/tags/buildpacks/</loc>
-    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://yannart.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://yannart.github.io/tags/container/</loc>
+    <loc>https://www.yannart.io/tags/buildpacks/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yannart.github.io/tags/devops/</loc>
+    <loc>https://www.yannart.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yannart.io/tags/container/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yannart.github.io/tags/docker/</loc>
+    <loc>https://www.yannart.io/tags/devops/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yannart.github.io/tags/java/</loc>
+    <loc>https://www.yannart.io/tags/docker/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yannart.github.io/tags/micro-service/</loc>
+    <loc>https://www.yannart.io/tags/java/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yannart.github.io/page/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://yannart.github.io/post/</loc>
+    <loc>https://www.yannart.io/tags/micro-service/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yannart.github.io/tags/spring/</loc>
+    <loc>https://www.yannart.io/page/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yannart.io/post/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yannart.github.io/tags/spring-boot/</loc>
+    <loc>https://www.yannart.io/tags/spring/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yannart.github.io/tags/</loc>
+    <loc>https://www.yannart.io/tags/spring-boot/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yannart.github.io/tags/tutorial/</loc>
+    <loc>https://www.yannart.io/tags/</loc>
+    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yannart.io/tags/tutorial/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Buildpacks on Yann Nicolas&#39; blog</title>
-    <link>https://yannart.github.io/tags/buildpacks/</link>
+    <link>https://www.yannart.io/tags/buildpacks/</link>
     <description>Recent content in Buildpacks on Yann Nicolas&#39; blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 20 Mar 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://yannart.github.io/tags/buildpacks/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.yannart.io/tags/buildpacks/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Create Spring Boot container images with Buildpacks</title>
-      <link>https://yannart.github.io/post/2019-03-20-spring-buildpacks/</link>
+      <link>https://www.yannart.io/post/2019-03-20-spring-buildpacks/</link>
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://yannart.github.io/post/2019-03-20-spring-buildpacks/</guid>
+      <guid>https://www.yannart.io/post/2019-03-20-spring-buildpacks/</guid>
       <description>Overview In this post we will build an OCI container image of a Spring Boot sample application using Cloud Native Buildpacks. We will then run the container using Docker.
 Introduction Spring Boot is one of the most popular frameworks to develop applications and micro-services on the Java platform. Spring Boot allows to execute applications using embedded Java Servlet Container like Tomcat or Jetty making it appropriate to be run in containers.</description>
     </item>
