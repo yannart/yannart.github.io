@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Yann Nicolas&#39; blog</title>
     <link>https://www.yannart.io/tags/</link>
     <description>Recent content in Tags on Yann Nicolas&#39; blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 20 Mar 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.yannart.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 20 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.yannart.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Buildpacks</title>
+      <title>buildpacks</title>
       <link>https://www.yannart.io/tags/buildpacks/</link>
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       
@@ -20,7 +16,7 @@
     </item>
     
     <item>
-      <title>Container</title>
+      <title>container</title>
       <link>https://www.yannart.io/tags/container/</link>
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       
@@ -29,7 +25,7 @@
     </item>
     
     <item>
-      <title>Devops</title>
+      <title>DevOps</title>
       <link>https://www.yannart.io/tags/devops/</link>
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       
@@ -38,7 +34,7 @@
     </item>
     
     <item>
-      <title>Docker</title>
+      <title>docker</title>
       <link>https://www.yannart.io/tags/docker/</link>
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       
@@ -47,7 +43,7 @@
     </item>
     
     <item>
-      <title>Java</title>
+      <title>java</title>
       <link>https://www.yannart.io/tags/java/</link>
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       
@@ -56,7 +52,7 @@
     </item>
     
     <item>
-      <title>Micro Service</title>
+      <title>micro-service</title>
       <link>https://www.yannart.io/tags/micro-service/</link>
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       
@@ -65,7 +61,7 @@
     </item>
     
     <item>
-      <title>Spring</title>
+      <title>spring</title>
       <link>https://www.yannart.io/tags/spring/</link>
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       
@@ -74,7 +70,7 @@
     </item>
     
     <item>
-      <title>Spring Boot</title>
+      <title>spring boot</title>
       <link>https://www.yannart.io/tags/spring-boot/</link>
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       
@@ -83,7 +79,7 @@
     </item>
     
     <item>
-      <title>Tutorial</title>
+      <title>tutorial</title>
       <link>https://www.yannart.io/tags/tutorial/</link>
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       

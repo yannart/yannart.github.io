@@ -8,25 +8,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Create Spring Boot container images with Buildpacks - Yann Nicolas&#39; blog</title>
-  <meta property="og:title" content="Create Spring Boot container images with Buildpacks" />
-  <meta name="twitter:title" content="Create Spring Boot container images with Buildpacks" />
   <meta name="description" content="Automate from the source code to the OCI image">
-  <meta property="og:description" content="Automate from the source code to the OCI image">
-  <meta name="twitter:description" content="Automate from the source code to the OCI image">
   <meta name="author" content="Yann Nicolas"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "WebSite",
-    "name": "Yann Nicolas&#39; blog",
+    "name": "Yann Nicolas\u0027 blog",
     
-    "url": "https://www.yannart.io"
+    "url": "https:\/\/www.yannart.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https://www.yannart.io"
+  "url": "https:\/\/www.yannart.io"
   
   
   
@@ -41,14 +37,14 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https://www.yannart.io",
+          "@id": "https:\/\/www.yannart.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https://www.yannart.io/post/2019-03-20-spring-buildpacks/",
+          "@id": "https:\/\/www.yannart.io\/post\/2019-03-20-spring-buildpacks\/",
           "name": "Create spring boot container images with buildpacks"
         }
     }]
@@ -61,21 +57,20 @@
     "name" : "Yann Nicolas"
   },
   "headline": "Create Spring Boot container images with Buildpacks",
-  "description" : "Overview In this post we will build an OCI container image of a Spring Boot sample application using Cloud Native Buildpacks. We will then run the container using Docker.
-Introduction Spring Boot is one of the most popular frameworks to develop applications and micro-services on the Java platform. Spring Boot allows to execute applications using embedded Java Servlet Container like Tomcat or Jetty making it appropriate to be run in containers.",
+  "description" : "Overview In this post we will build an OCI container image of a Spring Boot sample application using Cloud Native Buildpacks. We will then run the container using Docker.\nIntroduction Spring Boot is one of the most popular frameworks to develop applications and micro-services on the Java platform. Spring Boot allows to execute applications using embedded Java Servlet Container like Tomcat or Jetty making it appropriate to be run in containers.",
   "inLanguage" : "en",
-  "wordCount": 554,
+  "wordCount":  554 ,
   "datePublished" : "2019-03-20T00:00:00",
   "dateModified" : "2019-03-20T00:00:00",
-  "image" : "https://www.yannart.io",
+  "image" : "https:\/\/www.yannart.io",
   "keywords" : [ "spring, spring boot, java, tutorial, docker, buildpacks, container, micro-service, DevOps" ],
-  "mainEntityOfPage" : "https://www.yannart.io/post/2019-03-20-spring-buildpacks/",
+  "mainEntityOfPage" : "https:\/\/www.yannart.io\/post\/2019-03-20-spring-buildpacks\/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https://www.yannart.io",
+    "name" : "https:\/\/www.yannart.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https://www.yannart.io",
+        "url" : "https:\/\/www.yannart.io",
         "height" :  60 ,
         "width" :  60
     }
@@ -88,20 +83,14 @@ Introduction Spring Boot is one of the most popular frameworks to develop applic
 <meta property="og:url" content="https://www.yannart.io/post/2019-03-20-spring-buildpacks/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Yann Nicolas&#39; blog" />
+
   <meta name="twitter:title" content="Create Spring Boot container images with Buildpacks" />
   <meta name="twitter:description" content="Automate from the source code to the OCI image">
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@yannart" />
   <meta name="twitter:creator" content="@yannart" />
   <link href='https://www.yannart.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@yannart" />
-  <meta name="twitter:creator" content="@yannart" />
-  <meta property="og:url" content="https://www.yannart.io/post/2019-03-20-spring-buildpacks/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Yann Nicolas&#39; blog" />
-
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.80.0" />
   <link rel="alternate" href="https://www.yannart.io/index.xml" type="application/rss+xml" title="Yann Nicolas&#39; blog"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://www.yannart.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -251,7 +240,7 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on March 20, 2019
+  <i class="fas fa-calendar"></i>&nbsp;
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
@@ -260,7 +249,9 @@ if (!doNotTrack) {
     &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;554&nbsp;words
   
   
-    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Yann Nicolas
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Yann Nicolas
+    
   
   
 </span>
@@ -280,94 +271,65 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        
-
-<h1 id="overview">Overview</h1>
-
+        <h1 id="overview">Overview</h1>
 <p>In this post we will build an <a href="https://www.opencontainers.org/">OCI</a> container image of a <a href="https://spring.io/projects/spring-boot">Spring Boot</a> sample application using <a href="https://buildpacks.io/">Cloud Native Buildpacks</a>. We will then run the container using <a href="https://www.docker.com/">Docker</a>.</p>
-
 <h2 id="introduction">Introduction</h2>
-
 <p>Spring Boot is one of the most popular frameworks to develop applications and micro-services on the Java platform. Spring Boot allows to execute applications using embedded Java Servlet Container like Tomcat or Jetty making it appropriate to be run in containers.</p>
-
 <p>To run an application in a container, you need to create a container image. You can achieve that you have multiple options:</p>
-
 <ul>
 <li>Manually with a Dockerfile</li>
 <li>Using a Maven plugin</li>
 <li>Using a buildpack</li>
 </ul>
-
 <p>In this post we are focussing on the last option: use Buildpacks to create a container image for a Spring Boot application.</p>
-
 <p>Buildpacks provide a higher level of abstraction than Dockerfiles auto-discovering the right way to build and package an application based on its characteristics (programming language, framework, configuration&hellip;) including application and OS dependencies. Platforms like <a href="https://www.heroku.com/">Heroku</a> and <a href="https://pivotal.io/platform">Pivotal Cloud Foundry</a> use Buildpacks.</p>
-
 <p>We are going to use <a href="https://buildpacks.io/">Cloud Native Buildpacks</a>. This project is backed by the <a href="https://www.cncf.io/">Cloud Native Computing Fundation</a> that is also the home of fastest-growing projects like <a href="https://kubernetes.io/">Kubernetes</a>, <a href="https://prometheus.io/">Prometheus</a> or <a href="https://www.envoyproxy.io/">Envoy</a>.</p>
-
 <h2 id="pre-requisites">Pre-requisites</h2>
-
 <p>For this tutorial, you will need to have installed:</p>
-
 <ul>
 <li><a href="https://git-scm.com/">Git</a> to get the Spring Boot sample application.</li>
 <li><a href="https://adoptopenjdk.net/">JDK 1.8</a> or later to run the Spring Boot sample application locally without Docker (optional).</li>
 <li><a href="https://buildpacks.io/docs/using-pack/install-pack/">Buildpacks</a> to build the OCI container image.</li>
 <li><a href="https://www.docker.com/products/docker-desktop">Docker</a> to run the OCI container image.</li>
 </ul>
-
 <h1 id="set-up-the-spring-boot-app">Set up the Spring Boot app</h1>
-
 <p>As Spring Boot sample application we are going to use the <a href="https://github.com/spring-projects/spring-petclinic">PetClinic</a>.
 Note that we could have picked any Java application built with Maven, not necessarily a Spring Boot application.</p>
-
 <h2 id="get-the-petclinic-source-code-and-run-it">Get the PetClinic source code and run it</h2>
-
 <p>Get the PetClinic source code using Git:</p>
-<div class="highlight"><pre class="chroma">git clone https://github.com/spring-projects/spring-petclinic.git</pre></div>
-<h3 id="run-petclinic-locally-optional">Run PetClinic locally (optional)</h3>
-
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">git clone https://github.com/spring-projects/spring-petclinic.git
+</code></pre></div><h3 id="run-petclinic-locally-optional">Run PetClinic locally (optional)</h3>
 <p>Move to the local copy of the PetClinic project:</p>
-<div class="highlight"><pre class="chroma">cd spring-petclinic</pre></div>
-<p>Build the application using the <a href="https://github.com/takari/maven-wrapper">Maven wrapper</a>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">./mvnw package</code></pre></div>
-<p>Run the application:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">java -jar target/*.jar</code></pre></div>
-<p>The PetClinic application runs locally:
-<img src="/images/2019-03-20-spring-buildpacks/petclinicExec.png" alt="&quot;PetClinic application execution on the command line&quot;" /></p>
-
-<p>You can access the PetClinic Web application opening the browser on the URL <a href="http://localhost:8080/">http://localhost:8080/</a> :
-<img src="/images/2019-03-20-spring-buildpacks/petclinicWeb.png" alt="&quot;PetClinic Web application&quot;" /></p>
-
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">cd spring-petclinic
+</code></pre></div><p>Build the application using the <a href="https://github.com/takari/maven-wrapper">Maven wrapper</a>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">./mvnw package
+</code></pre></div><p>Run the application:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">java -jar target/*.jar
+</code></pre></div><p>The PetClinic application runs locally:
+<img src="/images/2019-03-20-spring-buildpacks/petclinicExec.png" alt="&ldquo;PetClinic application execution on the command line&rdquo;"></p>
+<p>You can access the PetClinic Web application opening the browser on the URL http://localhost:8080/ :
+<img src="/images/2019-03-20-spring-buildpacks/petclinicWeb.png" alt="&ldquo;PetClinic Web application&rdquo;"></p>
 <h1 id="build-the-container-image">Build the container image</h1>
-
 <p>Once the Buildpacks is installed, the command <code>pack</code> should be available.</p>
-
 <p>The general syntax to <a href="https://buildpacks.io/docs/using-pack/building-app/">build an application</a> is the following:</p>
-<div class="highlight"><pre class="chroma">cd /path/to/node/app
-pack build private-registry.example.com/my-app:my-tag --publish</pre></div>
-<p>Let´s build the container image for PetClinic:</p>
-<div class="highlight"><pre class="chroma">cd spring-petclinic
-pack build yannart/springboot-petclinic</pre></div>
-<p>Buildpacks will detect the right buildpack to use, get the necessary dependencies like the JDK and Maven, build the project and package it in a container image:
-<img src="/images/2019-03-20-spring-buildpacks/petclinicBuildpack.png" alt="&quot;PetClinic Buildpack build&quot;" />
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">cd /path/to/node/app
+pack build private-registry.example.com/my-app:my-tag --publish
+</code></pre></div><p>Let´s build the container image for PetClinic:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">cd spring-petclinic
+pack build yannart/springboot-petclinic
+</code></pre></div><p>Buildpacks will detect the right buildpack to use, get the necessary dependencies like the JDK and Maven, build the project and package it in a container image:
+<img src="/images/2019-03-20-spring-buildpacks/petclinicBuildpack.png" alt="&ldquo;PetClinic Buildpack build&rdquo;">
 [&hellip;]
-<img src="/images/2019-03-20-spring-buildpacks/petclinicBuildpackExport.png" alt="&quot;PetClinic Buildpack export&quot;" /></p>
-
+<img src="/images/2019-03-20-spring-buildpacks/petclinicBuildpackExport.png" alt="&ldquo;PetClinic Buildpack export&rdquo;"></p>
 <p>The lifecycle of the build follows the reference implementation described in the <a href="https://github.com/buildpack/spec">Buildpack API v3</a>.</p>
-
 <h1 id="run-the-container-with-docker">Run the container with Docker</h1>
-
 <p>Once the container image is built and available locally, it can be run with Docker:</p>
-<div class="highlight"><pre class="chroma">docker run -p 8080:9090 yannart/springboot-petclinic</pre></div>
-<p>In this example we are mapping the port accessible externally 9090 to the application port 8080, but any other available port could be used.</p>
-
-<p>You can then access the PetClinic Web application going to the URL http://[docker_host]:9090. In my case <a href="http://localhost:9090">http://localhost:9090</a> .</p>
-
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">docker run -p 8080:9090 yannart/springboot-petclinic
+</code></pre></div><p>In this example we are mapping the port accessible externally 9090 to the application port 8080, but any other available port could be used.</p>
+<p>You can then access the PetClinic Web application going to the URL http://[docker_host]:9090. In my case http://localhost:9090 .</p>
 <h1 id="summary">Summary</h1>
-
 <p>In this post we have seen how we can automate the build of a Spring Boot application and its packaging in a container image using Buildpacks.
 The container image was then used to run the application with Docker.</p>
-
 <p>This process could be easily be included as part of a CI/CD pipeline.</p>
 
 
@@ -412,13 +374,6 @@ The container image was then used to run the application with Docker.</p>
   
       
       <li>
-        <a href="//plus.google.com/share?url=https%3a%2f%2fwww.yannart.io%2fpost%2f2019-03-20-spring-buildpacks%2f" target="_blank" title="Share on Google Plus">
-          <i class="fab fa-google-plus"></i>
-        </a>
-      </li>
-  
-      
-      <li>
         <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.yannart.io%2fpost%2f2019-03-20-spring-buildpacks%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
@@ -454,19 +409,25 @@ The container image was then used to run the application with Docker.</p>
     </ul>
   </div>
   
+
               </div>
             </section>
         
 
         
           
+            
           
-          <h4 class="see-also">See also</h4>
-          <ul>
+
           
-            <li><a href="/post/2009-11-18-spring-garden/">Tutorial - Spring Garden</a></li>
-          
-          </ul>
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2009-11-18-spring-garden/">Tutorial - Spring Garden</a></li>
+                
+              </ul>
+
           
         
       </article>
@@ -506,7 +467,8 @@ The container image was then used to run the application with Docker.</p>
   </div>
 </div>
 
-    <footer>
+      
+<footer>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -538,9 +500,7 @@ The container image was then used to run the application with Docker.</p>
               </li>
           
           <li>
-            
-            <a href="https://www.yannart.io/index.xml" title="RSS">
-            
+            <a href="" title="RSS">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
@@ -615,6 +575,7 @@ $(function(){
 
 
 
+    
   </body>
 </html>
 
