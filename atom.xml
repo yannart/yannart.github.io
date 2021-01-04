@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Yann Nicolas&#x27; Blog</title>
+	<subtitle>A blog about Cloud, Systems and Software Architecture</subtitle>
+	<link href="https://www.yannart.io/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://www.yannart.io"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2019-03-20T00:00:00+00:00</updated>
+	<id>https://www.yannart.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Create Spring Boot container images with Buildpacks</title>
+		<published>2019-03-20T00:00:00+00:00</published>
+		<updated>2019-03-20T00:00:00+00:00</updated>
+		<link href="https://www.yannart.io/post/2019-03-20-spring-buildpacks/" type="text/html"/>
+		<id>https://www.yannart.io/post/2019-03-20-spring-buildpacks/</id>
+		<content type="html">&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h1&gt;
+&lt;p&gt;In this post we will build an &lt;a href=&quot;https:&#x2F;&#x2F;www.opencontainers.org&#x2F;&quot;&gt;OCI&lt;&#x2F;a&gt; container image of a &lt;a href=&quot;https:&#x2F;&#x2F;spring.io&#x2F;projects&#x2F;spring-boot&quot;&gt;Spring Boot&lt;&#x2F;a&gt; sample application using &lt;a href=&quot;https:&#x2F;&#x2F;buildpacks.io&#x2F;&quot;&gt;Cloud Native Buildpacks&lt;&#x2F;a&gt;. We will then run the container using &lt;a href=&quot;https:&#x2F;&#x2F;www.docker.com&#x2F;&quot;&gt;Docker&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;Spring Boot is one of the most popular frameworks to develop applications and micro-services on the Java platform. Spring Boot allows to execute applications using embedded Java Servlet Container like Tomcat or Jetty making it appropriate to be run in containers. &lt;&#x2F;p&gt;
+&lt;p&gt;To run an application in a container, you need to create a container image. You can achieve that you have multiple options:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Manually with a Dockerfile&lt;&#x2F;li&gt;
+&lt;li&gt;Using a Maven plugin&lt;&#x2F;li&gt;
+&lt;li&gt;Using a buildpack&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;In this post we are focussing on the last option: use Buildpacks to create a container image for a Spring Boot application.&lt;&#x2F;p&gt;
+&lt;p&gt;Buildpacks provide a higher level of abstraction than Dockerfiles auto-discovering the right way to build and package an application based on its characteristics (programming language, framework, configuration...) including application and OS dependencies. Platforms like &lt;a href=&quot;https:&#x2F;&#x2F;www.heroku.com&#x2F;&quot;&gt;Heroku&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;pivotal.io&#x2F;platform&quot;&gt;Pivotal Cloud Foundry&lt;&#x2F;a&gt; use Buildpacks.&lt;&#x2F;p&gt;
+&lt;p&gt;We are going to use &lt;a href=&quot;https:&#x2F;&#x2F;buildpacks.io&#x2F;&quot;&gt;Cloud Native Buildpacks&lt;&#x2F;a&gt;. This project is backed by the &lt;a href=&quot;https:&#x2F;&#x2F;www.cncf.io&#x2F;&quot;&gt;Cloud Native Computing Fundation&lt;&#x2F;a&gt; that is also the home of fastest-growing projects like &lt;a href=&quot;https:&#x2F;&#x2F;kubernetes.io&#x2F;&quot;&gt;Kubernetes&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;prometheus.io&#x2F;&quot;&gt;Prometheus&lt;&#x2F;a&gt; or &lt;a href=&quot;https:&#x2F;&#x2F;www.envoyproxy.io&#x2F;&quot;&gt;Envoy&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;pre-requisites&quot;&gt;Pre-requisites&lt;&#x2F;h2&gt;
+&lt;p&gt;For this tutorial, you will need to have installed:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;git-scm.com&#x2F;&quot;&gt;Git&lt;&#x2F;a&gt; to get the Spring Boot sample application.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;adoptopenjdk.net&#x2F;&quot;&gt;JDK 1.8&lt;&#x2F;a&gt; or later to run the Spring Boot sample application locally without Docker (optional).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;buildpacks.io&#x2F;docs&#x2F;using-pack&#x2F;install-pack&#x2F;&quot;&gt;Buildpacks&lt;&#x2F;a&gt; to build the OCI container image.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.docker.com&#x2F;products&#x2F;docker-desktop&quot;&gt;Docker&lt;&#x2F;a&gt; to run the OCI container image.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;set-up-the-spring-boot-app&quot;&gt;Set up the Spring Boot app&lt;&#x2F;h1&gt;
+&lt;p&gt;As Spring Boot sample application we are going to use the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;spring-projects&#x2F;spring-petclinic&quot;&gt;PetClinic&lt;&#x2F;a&gt;. 
+Note that we could have picked any Java application built with Maven, not necessarily a Spring Boot application.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;get-the-petclinic-source-code-and-run-it&quot;&gt;Get the PetClinic source code and run it&lt;&#x2F;h2&gt;
+&lt;p&gt;Get the PetClinic source code using Git:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212121;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#eeffff;&quot;&gt;git clone https:&#x2F;&#x2F;github.com&#x2F;spring-projects&#x2F;spring-petclinic.git
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;run-petclinic-locally-optional&quot;&gt;Run PetClinic locally (optional)&lt;&#x2F;h3&gt;
+&lt;p&gt;Move to the local copy of the PetClinic project:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212121;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#eeffff;&quot;&gt;cd spring-petclinic
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Build the application using the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;takari&#x2F;maven-wrapper&quot;&gt;Maven wrapper&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212121;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;.&#x2F;mvnw package
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Run the application:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212121;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;java&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt; -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f78c6c;&quot;&gt;jar&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt; target&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;.jar
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The PetClinic application runs locally:
+&lt;img src=&quot;&#x2F;images&#x2F;2019-03-20-spring-buildpacks&#x2F;petclinicExec.png&quot; alt=&quot;&amp;quot;PetClinic application execution on the command line&amp;quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;You can access the PetClinic Web application opening the browser on the URL http:&#x2F;&#x2F;localhost:8080&#x2F; :
+&lt;img src=&quot;&#x2F;images&#x2F;2019-03-20-spring-buildpacks&#x2F;petclinicWeb.png&quot; alt=&quot;&amp;quot;PetClinic Web application&amp;quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;build-the-container-image&quot;&gt;Build the container image&lt;&#x2F;h1&gt;
+&lt;p&gt;Once the Buildpacks is installed, the command &lt;code&gt;pack&lt;&#x2F;code&gt; should be available.&lt;&#x2F;p&gt;
+&lt;p&gt;The general syntax to &lt;a href=&quot;https:&#x2F;&#x2F;buildpacks.io&#x2F;docs&#x2F;using-pack&#x2F;building-app&#x2F;&quot;&gt;build an application&lt;&#x2F;a&gt; is the following:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212121;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#eeffff;&quot;&gt;cd &#x2F;path&#x2F;to&#x2F;node&#x2F;app
+pack build private-registry.example.com&#x2F;my-app:my-tag --publish
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Let´s build the container image for PetClinic:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212121;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#eeffff;&quot;&gt;cd spring-petclinic
+pack build yannart&#x2F;springboot-petclinic
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Buildpacks will detect the right buildpack to use, get the necessary dependencies like the JDK and Maven, build the project and package it in a container image:
+&lt;img src=&quot;&#x2F;images&#x2F;2019-03-20-spring-buildpacks&#x2F;petclinicBuildpack.png&quot; alt=&quot;&amp;quot;PetClinic Buildpack build&amp;quot;&quot; &#x2F;&gt;
+[...]
+&lt;img src=&quot;&#x2F;images&#x2F;2019-03-20-spring-buildpacks&#x2F;petclinicBuildpackExport.png&quot; alt=&quot;&amp;quot;PetClinic Buildpack export&amp;quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The lifecycle of the build follows the reference implementation described in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;buildpack&#x2F;spec&quot;&gt;Buildpack API v3&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;run-the-container-with-docker&quot;&gt;Run the container with Docker&lt;&#x2F;h1&gt;
+&lt;p&gt;Once the container image is built and available locally, it can be run with Docker:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212121;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#eeffff;&quot;&gt;docker run -p 8080:9090 yannart&#x2F;springboot-petclinic
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;In this example we are mapping the port accessible externally 9090 to the application port 8080, but any other available port could be used.&lt;&#x2F;p&gt;
+&lt;p&gt;You can then access the PetClinic Web application going to the URL http:&#x2F;&#x2F;[docker_host]:9090. In my case http:&#x2F;&#x2F;localhost:9090 .&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;&#x2F;h1&gt;
+&lt;p&gt;In this post we have seen how we can automate the build of a Spring Boot application and its packaging in a container image using Buildpacks.
+The container image was then used to run the application with Docker.&lt;&#x2F;p&gt;
+&lt;p&gt;This process could be easily be included as part of a CI&#x2F;CD pipeline.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Spring Garden - An introduction to Spring IoC and AOP</title>
+		<published>2009-11-18T00:00:00+00:00</published>
+		<updated>2009-11-18T00:00:00+00:00</updated>
+		<link href="https://www.yannart.io/post/2009-11-18-spring-garden/" type="text/html"/>
+		<id>https://www.yannart.io/post/2009-11-18-spring-garden/</id>
+		<content type="html">&lt;p&gt;This tutorial is an introduction to the IoC and the AOP modules of the Spring framework. We simulate a spring garden with plants and a gardener that takes care of them. But there is a problem, an evil weed is stealing all the nutrients.&lt;&#x2F;p&gt;
+&lt;p&gt;The main used technologies are Java, Spring, AspectJ and Maven.&lt;&#x2F;p&gt;
+&lt;p&gt;The tutorial is in french but is easily understandable because the code is self explanatory. &lt;&#x2F;p&gt;
+&lt;p&gt;[Read the tutorial] (http:&#x2F;&#x2F;yannart.developpez.com&#x2F;java&#x2F;spring&#x2F;tutoriel&#x2F;) (hosted by &lt;a href=&quot;http:&#x2F;&#x2F;www.developpez.com&quot;&gt;Developpez.com&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;p&gt;Note: This is an import from my [old blog] (http:&#x2F;&#x2F;merlinsource.blogspot.com&#x2F;) 10 years ago!&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

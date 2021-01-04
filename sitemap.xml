@@ -1,88 +1,56 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://www.yannart.io/</loc>
-    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.yannart.io/tags/buildpacks/</loc>
-    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.yannart.io/tags/container/</loc>
-    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.yannart.io/post/2019-03-20-spring-buildpacks/</loc>
-    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.yannart.io/tags/devops/</loc>
-    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.yannart.io/tags/docker/</loc>
-    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.yannart.io/tags/java/</loc>
-    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.yannart.io/tags/micro-service/</loc>
-    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.yannart.io/post/</loc>
-    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.yannart.io/tags/spring/</loc>
-    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.yannart.io/tags/spring-boot/</loc>
-    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.yannart.io/tags/</loc>
-    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.yannart.io/tags/tutorial/</loc>
-    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.yannart.io/post/2009-11-18-spring-garden/</loc>
-    <lastmod>2009-11-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.yannart.io/page/about/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.yannart.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.yannart.io/page/</loc>
-  </url>
-  
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://www.yannart.io/</loc>
+    </url>
+    <url>
+        <loc>https://www.yannart.io/about/</loc>
+    </url>
+    <url>
+        <loc>https://www.yannart.io/categories/</loc>
+    </url>
+    <url>
+        <loc>https://www.yannart.io/categories/tutorial/</loc>
+    </url>
+    <url>
+        <loc>https://www.yannart.io/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://www.yannart.io/post/2009-11-18-spring-garden/</loc>
+        <lastmod>2009-11-18</lastmod>
+    </url>
+    <url>
+        <loc>https://www.yannart.io/post/2019-03-20-spring-buildpacks/</loc>
+        <lastmod>2019-03-20</lastmod>
+    </url>
+    <url>
+        <loc>https://www.yannart.io/tags/</loc>
+    </url>
+    <url>
+        <loc>https://www.yannart.io/tags/buildpacks/</loc>
+    </url>
+    <url>
+        <loc>https://www.yannart.io/tags/container/</loc>
+    </url>
+    <url>
+        <loc>https://www.yannart.io/tags/devops/</loc>
+    </url>
+    <url>
+        <loc>https://www.yannart.io/tags/docker/</loc>
+    </url>
+    <url>
+        <loc>https://www.yannart.io/tags/java/</loc>
+    </url>
+    <url>
+        <loc>https://www.yannart.io/tags/micro-service/</loc>
+    </url>
+    <url>
+        <loc>https://www.yannart.io/tags/spring-boot/</loc>
+    </url>
+    <url>
+        <loc>https://www.yannart.io/tags/spring/</loc>
+    </url>
+    <url>
+        <loc>https://www.yannart.io/tags/tutorial/</loc>
+    </url>
 </urlset>
