@@ -10,7 +10,7 @@
     Yann Nicolas&#x27; Blog - Create Spring Boot container images with Buildpacks
 
         </title>
-        <link href="https:&#x2F;&#x2F;www.yannart.io&#x2F;favicon.ico" rel="icon" type="image/x-icon"/>
+        <link href="https://www.yannart.io/favicon.ico" rel="icon" type="image/x-icon"/>
         
             <link rel="alternate" type= "application/atom+xml"  title="RSS" href="https://www.yannart.io/atom.xml"/>
         
@@ -33,11 +33,11 @@
 
         
         
-            <script src="https:&#x2F;&#x2F;www.yannart.io&#x2F;slideout.min.js" type="text/javascript"></script>
+            <script src="https://www.yannart.io/slideout.min.js" type="text/javascript"></script>
             
         
         
-            <link href="https:&#x2F;&#x2F;www.yannart.io&#x2F;site.css" rel="stylesheet"/>
+            <link href="https://www.yannart.io/site.css" rel="stylesheet"/>
             <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
             <link charset="utf-8" href="https://indestructibletype.com/fonts/Jost.css" rel="stylesheet" type="text/css"/>
             
@@ -322,7 +322,7 @@
             
                 <div class="post__category">
                     
-                        <a href="https:&#x2F;&#x2F;www.yannart.io&#x2F;categories&#x2F;tutorial&#x2F;">tutorial</a>
+                        <a href="https://www.yannart.io/categories/tutorial/">tutorial</a>
                     
                 </div>
             
@@ -356,21 +356,18 @@
 Note that we could have picked any Java application built with Maven, not necessarily a Spring Boot application.</p>
 <h2 id="get-the-petclinic-source-code-and-run-it">Get the PetClinic source code and run it</h2>
 <p>Get the PetClinic source code using Git:</p>
-<pre style="background-color:#212121;">
-<code><span style="color:#eeffff;">git clone https://github.com/spring-projects/spring-petclinic.git
-</span></code></pre><h3 id="run-petclinic-locally-optional">Run PetClinic locally (optional)</h3>
+<pre><code>git clone https://github.com/spring-projects/spring-petclinic.git
+</code></pre>
+<h3 id="run-petclinic-locally-optional">Run PetClinic locally (optional)</h3>
 <p>Move to the local copy of the PetClinic project:</p>
-<pre style="background-color:#212121;">
-<code><span style="color:#eeffff;">cd spring-petclinic
-</span></code></pre>
+<pre><code>cd spring-petclinic
+</code></pre>
 <p>Build the application using the <a href="https://github.com/takari/maven-wrapper">Maven wrapper</a>:</p>
-<pre style="background-color:#212121;">
-<code><span style="color:#82aaff;">./mvnw package
-</span></code></pre>
+<pre data-lang="bash" class="language-bash "><code class="language-bash" data-lang="bash">./mvnw package
+</code></pre>
 <p>Run the application:</p>
-<pre style="background-color:#212121;">
-<code><span style="color:#82aaff;">java</span><span style="color:#89ddff;"> -</span><span style="color:#f78c6c;">jar</span><span style="color:#82aaff;"> target/</span><span style="color:#89ddff;">*</span><span style="color:#82aaff;">.jar
-</span></code></pre>
+<pre data-lang="bash" class="language-bash "><code class="language-bash" data-lang="bash">java -jar target/*.jar
+</code></pre>
 <p>The PetClinic application runs locally:
 <img src="/images/2019-03-20-spring-buildpacks/petclinicExec.png" alt="&quot;PetClinic application execution on the command line&quot;" /></p>
 <p>You can access the PetClinic Web application opening the browser on the URL http://localhost:8080/ :
@@ -378,15 +375,13 @@ Note that we could have picked any Java application built with Maven, not necess
 <h1 id="build-the-container-image">Build the container image</h1>
 <p>Once the Buildpacks is installed, the command <code>pack</code> should be available.</p>
 <p>The general syntax to <a href="https://buildpacks.io/docs/using-pack/building-app/">build an application</a> is the following:</p>
-<pre style="background-color:#212121;">
-<code><span style="color:#eeffff;">cd /path/to/node/app
+<pre><code>cd /path/to/node/app
 pack build private-registry.example.com/my-app:my-tag --publish
-</span></code></pre>
+</code></pre>
 <p>Let´s build the container image for PetClinic:</p>
-<pre style="background-color:#212121;">
-<code><span style="color:#eeffff;">cd spring-petclinic
+<pre><code>cd spring-petclinic
 pack build yannart/springboot-petclinic
-</span></code></pre>
+</code></pre>
 <p>Buildpacks will detect the right buildpack to use, get the necessary dependencies like the JDK and Maven, build the project and package it in a container image:
 <img src="/images/2019-03-20-spring-buildpacks/petclinicBuildpack.png" alt="&quot;PetClinic Buildpack build&quot;" />
 [...]
@@ -394,9 +389,8 @@ pack build yannart/springboot-petclinic
 <p>The lifecycle of the build follows the reference implementation described in the <a href="https://github.com/buildpack/spec">Buildpack API v3</a>.</p>
 <h1 id="run-the-container-with-docker">Run the container with Docker</h1>
 <p>Once the container image is built and available locally, it can be run with Docker:</p>
-<pre style="background-color:#212121;">
-<code><span style="color:#eeffff;">docker run -p 8080:9090 yannart/springboot-petclinic
-</span></code></pre>
+<pre><code>docker run -p 8080:9090 yannart/springboot-petclinic
+</code></pre>
 <p>In this example we are mapping the port accessible externally 9090 to the application port 8080, but any other available port could be used.</p>
 <p>You can then access the PetClinic Web application going to the URL http://[docker_host]:9090. In my case http://localhost:9090 .</p>
 <h1 id="summary">Summary</h1>
@@ -414,35 +408,35 @@ The container image was then used to run the application with Docker.</p>
                 
                     <div class="post-tags">
                         
-                            <a href="https:&#x2F;&#x2F;www.yannart.io&#x2F;tags&#x2F;spring&#x2F;">
+                            <a href="https://www.yannart.io/tags/spring/">
                                 <span class="hashtag">#</span>
                                 spring</a>
                         
-                            <a href="https:&#x2F;&#x2F;www.yannart.io&#x2F;tags&#x2F;java&#x2F;">
+                            <a href="https://www.yannart.io/tags/java/">
                                 <span class="hashtag">#</span>
                                 java</a>
                         
-                            <a href="https:&#x2F;&#x2F;www.yannart.io&#x2F;tags&#x2F;spring-boot&#x2F;">
+                            <a href="https://www.yannart.io/tags/spring-boot/">
                                 <span class="hashtag">#</span>
                                 spring boot</a>
                         
-                            <a href="https:&#x2F;&#x2F;www.yannart.io&#x2F;tags&#x2F;docker&#x2F;">
+                            <a href="https://www.yannart.io/tags/docker/">
                                 <span class="hashtag">#</span>
                                 docker</a>
                         
-                            <a href="https:&#x2F;&#x2F;www.yannart.io&#x2F;tags&#x2F;buildpacks&#x2F;">
+                            <a href="https://www.yannart.io/tags/buildpacks/">
                                 <span class="hashtag">#</span>
                                 buildpacks</a>
                         
-                            <a href="https:&#x2F;&#x2F;www.yannart.io&#x2F;tags&#x2F;container&#x2F;">
+                            <a href="https://www.yannart.io/tags/container/">
                                 <span class="hashtag">#</span>
                                 container</a>
                         
-                            <a href="https:&#x2F;&#x2F;www.yannart.io&#x2F;tags&#x2F;micro-service&#x2F;">
+                            <a href="https://www.yannart.io/tags/micro-service/">
                                 <span class="hashtag">#</span>
                                 micro-service</a>
                         
-                            <a href="https:&#x2F;&#x2F;www.yannart.io&#x2F;tags&#x2F;devops&#x2F;">
+                            <a href="https://www.yannart.io/tags/devops/">
                                 <span class="hashtag">#</span>
                                 DevOps</a>
                         
@@ -552,7 +546,7 @@ The container image was then used to run the application with Docker.</p>
             </main>
         </div>
         
-            <script src="https:&#x2F;&#x2F;www.yannart.io&#x2F;main.js" type="text/javascript"></script>
+            <script src="https://www.yannart.io/main.js" type="text/javascript"></script>
         
     </body>
 </html>

@@ -39,21 +39,18 @@
 Note that we could have picked any Java application built with Maven, not necessarily a Spring Boot application.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;get-the-petclinic-source-code-and-run-it&quot;&gt;Get the PetClinic source code and run it&lt;&#x2F;h2&gt;
 &lt;p&gt;Get the PetClinic source code using Git:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#212121;&quot;&gt;
-&lt;code&gt;&lt;span style=&quot;color:#eeffff;&quot;&gt;git clone https:&#x2F;&#x2F;github.com&#x2F;spring-projects&#x2F;spring-petclinic.git
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;run-petclinic-locally-optional&quot;&gt;Run PetClinic locally (optional)&lt;&#x2F;h3&gt;
+&lt;pre&gt;&lt;code&gt;git clone https:&#x2F;&#x2F;github.com&#x2F;spring-projects&#x2F;spring-petclinic.git
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;run-petclinic-locally-optional&quot;&gt;Run PetClinic locally (optional)&lt;&#x2F;h3&gt;
 &lt;p&gt;Move to the local copy of the PetClinic project:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#212121;&quot;&gt;
-&lt;code&gt;&lt;span style=&quot;color:#eeffff;&quot;&gt;cd spring-petclinic
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre&gt;&lt;code&gt;cd spring-petclinic
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Build the application using the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;takari&#x2F;maven-wrapper&quot;&gt;Maven wrapper&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#212121;&quot;&gt;
-&lt;code&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;.&#x2F;mvnw package
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;.&#x2F;mvnw package
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Run the application:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#212121;&quot;&gt;
-&lt;code&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;java&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt; -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f78c6c;&quot;&gt;jar&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt; target&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;.jar
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java -jar target&#x2F;*.jar
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;The PetClinic application runs locally:
 &lt;img src=&quot;&#x2F;images&#x2F;2019-03-20-spring-buildpacks&#x2F;petclinicExec.png&quot; alt=&quot;&amp;quot;PetClinic application execution on the command line&amp;quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;You can access the PetClinic Web application opening the browser on the URL http:&#x2F;&#x2F;localhost:8080&#x2F; :
@@ -61,15 +58,13 @@ Note that we could have picked any Java application built with Maven, not necess
 &lt;h1 id=&quot;build-the-container-image&quot;&gt;Build the container image&lt;&#x2F;h1&gt;
 &lt;p&gt;Once the Buildpacks is installed, the command &lt;code&gt;pack&lt;&#x2F;code&gt; should be available.&lt;&#x2F;p&gt;
 &lt;p&gt;The general syntax to &lt;a href=&quot;https:&#x2F;&#x2F;buildpacks.io&#x2F;docs&#x2F;using-pack&#x2F;building-app&#x2F;&quot;&gt;build an application&lt;&#x2F;a&gt; is the following:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#212121;&quot;&gt;
-&lt;code&gt;&lt;span style=&quot;color:#eeffff;&quot;&gt;cd &#x2F;path&#x2F;to&#x2F;node&#x2F;app
+&lt;pre&gt;&lt;code&gt;cd &#x2F;path&#x2F;to&#x2F;node&#x2F;app
 pack build private-registry.example.com&#x2F;my-app:my-tag --publish
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Let´s build the container image for PetClinic:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#212121;&quot;&gt;
-&lt;code&gt;&lt;span style=&quot;color:#eeffff;&quot;&gt;cd spring-petclinic
+&lt;pre&gt;&lt;code&gt;cd spring-petclinic
 pack build yannart&#x2F;springboot-petclinic
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Buildpacks will detect the right buildpack to use, get the necessary dependencies like the JDK and Maven, build the project and package it in a container image:
 &lt;img src=&quot;&#x2F;images&#x2F;2019-03-20-spring-buildpacks&#x2F;petclinicBuildpack.png&quot; alt=&quot;&amp;quot;PetClinic Buildpack build&amp;quot;&quot; &#x2F;&gt;
 [...]
@@ -77,9 +72,8 @@ pack build yannart&#x2F;springboot-petclinic
 &lt;p&gt;The lifecycle of the build follows the reference implementation described in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;buildpack&#x2F;spec&quot;&gt;Buildpack API v3&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;run-the-container-with-docker&quot;&gt;Run the container with Docker&lt;&#x2F;h1&gt;
 &lt;p&gt;Once the container image is built and available locally, it can be run with Docker:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#212121;&quot;&gt;
-&lt;code&gt;&lt;span style=&quot;color:#eeffff;&quot;&gt;docker run -p 8080:9090 yannart&#x2F;springboot-petclinic
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre&gt;&lt;code&gt;docker run -p 8080:9090 yannart&#x2F;springboot-petclinic
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;In this example we are mapping the port accessible externally 9090 to the application port 8080, but any other available port could be used.&lt;&#x2F;p&gt;
 &lt;p&gt;You can then access the PetClinic Web application going to the URL http:&#x2F;&#x2F;[docker_host]:9090. In my case http:&#x2F;&#x2F;localhost:9090 .&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;summary&quot;&gt;Summary&lt;&#x2F;h1&gt;
